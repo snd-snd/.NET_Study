@@ -11,12 +11,9 @@ namespace _00_ExampleApp
     {
         static void Main(string[] args)
         {
-            int? a = 10;
+            Predicate<int> pre = s => s.Equals(10);
 
-            double? b = a as int?;
-
-            Console.WriteLine(b);
-
+            Console.WriteLine(pre(11));
 
 
             
