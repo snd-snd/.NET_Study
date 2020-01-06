@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_01_NullableApp", "_01_NullableApp\_01_NullableApp.csproj", "{E7AD2DA5-F165-4C9F-8E69-916EA20B2EFE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_02_NullableStaticApp", "_02_NullableStaticApp\_02_NullableStaticApp.csproj", "{AB3CA1E1-F336-478F-9D70-D8B6E30967A8}"
@@ -32,6 +30,16 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_13_AnonymousMethodApp", "_13_AnonymousMethodApp\_13_AnonymousMethodApp.csproj", "{C5BDF109-EE82-4313-AE54-BACA9419CD24}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_14_LambdaExpressionApp", "_14_LambdaExpressionApp\_14_LambdaExpressionApp.csproj", "{CED3ACA6-7703-4398-AB75-B235EB299B21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_15_AnonymousTypeApp", "_15_AnonymousType\_15_AnonymousTypeApp.csproj", "{515026A0-77AD-41DD-B3BD-FDB1FD237A12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_16_AnonymousTypeLINQApp", "_16_AnonymousTypeLINQApp\_16_AnonymousTypeLINQApp.csproj", "{C15A2924-C095-4FEE-87A5-C30AA180E5ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_17_VarKeywordApp", "_17_VarKeywordApp\_17_VarKeywordApp.csproj", "{5264EF8E-E52F-467B-B44D-A03347CF67D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_18_DynamicKeywordApp", "_18_DynamicKeywordApp\_18_DynamicKeywordApp.csproj", "{6116E5BE-2A6A-4951-8160-AE3229C1ECEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_19_ExpansionMethodApp", "_19_ExpansionMethodApp\_19_ExpansionMethodApp.csproj", "{D6C96BB6-235E-49DC-A595-429C9926F1CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +107,26 @@ Global
 		{CED3ACA6-7703-4398-AB75-B235EB299B21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CED3ACA6-7703-4398-AB75-B235EB299B21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CED3ACA6-7703-4398-AB75-B235EB299B21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{515026A0-77AD-41DD-B3BD-FDB1FD237A12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{515026A0-77AD-41DD-B3BD-FDB1FD237A12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{515026A0-77AD-41DD-B3BD-FDB1FD237A12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{515026A0-77AD-41DD-B3BD-FDB1FD237A12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C15A2924-C095-4FEE-87A5-C30AA180E5ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C15A2924-C095-4FEE-87A5-C30AA180E5ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C15A2924-C095-4FEE-87A5-C30AA180E5ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C15A2924-C095-4FEE-87A5-C30AA180E5ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5264EF8E-E52F-467B-B44D-A03347CF67D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5264EF8E-E52F-467B-B44D-A03347CF67D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5264EF8E-E52F-467B-B44D-A03347CF67D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5264EF8E-E52F-467B-B44D-A03347CF67D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6116E5BE-2A6A-4951-8160-AE3229C1ECEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6116E5BE-2A6A-4951-8160-AE3229C1ECEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6116E5BE-2A6A-4951-8160-AE3229C1ECEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6116E5BE-2A6A-4951-8160-AE3229C1ECEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6C96BB6-235E-49DC-A595-429C9926F1CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6C96BB6-235E-49DC-A595-429C9926F1CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6C96BB6-235E-49DC-A595-429C9926F1CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6C96BB6-235E-49DC-A595-429C9926F1CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
