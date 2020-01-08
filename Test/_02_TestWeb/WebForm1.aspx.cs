@@ -12,23 +12,36 @@ namespace _02_TestWeb
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            Response.Write(DateTime.Now.ToLongTimeString()+"</br>");
+            if (!Page.IsPostBack)
+            {
+                TextBox1.Text = "값을 입력하시오.";
+            }
+            
+            
+            
         }
 
         protected void Page_PreInit(object sender, EventArgs e)
         {
-            Response.Write("PreInit</br>");
+            Console.WriteLine("PreInit 요청");
+            System.Diagnostics.Debug.WriteLine("메시지");
         }
 
         protected void Page_Init(object sender, EventArgs e)
         {
-            Response.Write("Init</br>");
+            Console.WriteLine("init 요청");
         }
 
         protected void Page_PreRender(object sender, EventArgs e)
         {
-            Response.Write("PreRender</br>");
+            Console.WriteLine("PreRender 요청");
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Write(TextBox1.Text);
+        }
+
 
     }
 }

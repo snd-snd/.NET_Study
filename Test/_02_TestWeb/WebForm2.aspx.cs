@@ -11,7 +11,8 @@ namespace _02_TestWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            TextBox box = (TextBox)PreviousPage.FindControl("TextBox1");
+            Response.Write(box.Text);
         }
     }
 }
