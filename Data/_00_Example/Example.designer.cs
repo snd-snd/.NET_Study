@@ -22,7 +22,7 @@ namespace _00_ExampleApp
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="study")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="data")]
 	public partial class ExampleDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -30,19 +30,13 @@ namespace _00_ExampleApp
 		
     #region 확장성 메서드 정의
     partial void OnCreated();
-    partial void Insertmember(member instance);
-    partial void Updatemember(member instance);
-    partial void Deletemember(member instance);
-    partial void InsertA(A instance);
-    partial void UpdateA(A instance);
-    partial void DeleteA(A instance);
-    partial void InsertB(B instance);
-    partial void UpdateB(B instance);
-    partial void DeleteB(B instance);
+    partial void InsertMembers(Members instance);
+    partial void UpdateMembers(Members instance);
+    partial void DeleteMembers(Members instance);
     #endregion
 		
 		public ExampleDataContext() : 
-				base(global::_00_ExampleApp.Properties.Settings.Default.studyConnectionString, mappingSource)
+				base(global::_00_ExampleApp.Properties.Settings.Default.dataConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -71,288 +65,124 @@ namespace _00_ExampleApp
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<member> member
+		public System.Data.Linq.Table<Members> Members
 		{
 			get
 			{
-				return this.GetTable<member>();
-			}
-		}
-		
-		public System.Data.Linq.Table<A> A
-		{
-			get
-			{
-				return this.GetTable<A>();
-			}
-		}
-		
-		public System.Data.Linq.Table<B> B
-		{
-			get
-			{
-				return this.GetTable<B>();
+				return this.GetTable<Members>();
 			}
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.member")]
-	public partial class member : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Members")]
+	public partial class Members : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private long _no;
+		private string _Id;
 		
-		private string _name;
+		private string _Password;
 		
-		private int _age;
+		private string _Name;
+		
+		private int _Age;
 		
     #region 확장성 메서드 정의
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnnoChanging(long value);
-    partial void OnnoChanged();
-    partial void OnnameChanging(string value);
-    partial void OnnameChanged();
-    partial void OnageChanging(int value);
-    partial void OnageChanged();
+    partial void OnIdChanging(string value);
+    partial void OnIdChanged();
+    partial void OnPasswordChanging(string value);
+    partial void OnPasswordChanged();
+    partial void OnNameChanging(string value);
+    partial void OnNameChanged();
+    partial void OnAgeChanging(int value);
+    partial void OnAgeChanged();
     #endregion
 		
-		public member()
+		public Members()
 		{
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_no", AutoSync=AutoSync.OnInsert, DbType="BigInt NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public long no
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string Id
 		{
 			get
 			{
-				return this._no;
+				return this._Id;
 			}
 			set
 			{
-				if ((this._no != value))
+				if ((this._Id != value))
 				{
-					this.OnnoChanging(value);
+					this.OnIdChanging(value);
 					this.SendPropertyChanging();
-					this._no = value;
-					this.SendPropertyChanged("no");
-					this.OnnoChanged();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
-		public string name
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
+		public string Password
 		{
 			get
 			{
-				return this._name;
+				return this._Password;
 			}
 			set
 			{
-				if ((this._name != value))
+				if ((this._Password != value))
 				{
-					this.OnnameChanging(value);
+					this.OnPasswordChanging(value);
 					this.SendPropertyChanging();
-					this._name = value;
-					this.SendPropertyChanged("name");
-					this.OnnameChanged();
+					this._Password = value;
+					this.SendPropertyChanged("Password");
+					this.OnPasswordChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_age", DbType="Int NOT NULL")]
-		public int age
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Name
 		{
 			get
 			{
-				return this._age;
+				return this._Name;
 			}
 			set
 			{
-				if ((this._age != value))
+				if ((this._Name != value))
 				{
-					this.OnageChanging(value);
+					this.OnNameChanging(value);
 					this.SendPropertyChanging();
-					this._age = value;
-					this.SendPropertyChanged("age");
-					this.OnageChanged();
+					this._Name = value;
+					this.SendPropertyChanged("Name");
+					this.OnNameChanged();
 				}
 			}
 		}
 		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.A")]
-	public partial class A : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _CODE;
-		
-		private string _CODE_NAME;
-		
-    #region 확장성 메서드 정의
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnCODEChanging(int value);
-    partial void OnCODEChanged();
-    partial void OnCODE_NAMEChanging(string value);
-    partial void OnCODE_NAMEChanged();
-    #endregion
-		
-		public A()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CODE", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int CODE
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Age", DbType="Int NOT NULL")]
+		public int Age
 		{
 			get
 			{
-				return this._CODE;
+				return this._Age;
 			}
 			set
 			{
-				if ((this._CODE != value))
+				if ((this._Age != value))
 				{
-					this.OnCODEChanging(value);
+					this.OnAgeChanging(value);
 					this.SendPropertyChanging();
-					this._CODE = value;
-					this.SendPropertyChanged("CODE");
-					this.OnCODEChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CODE_NAME", DbType="NChar(100) NOT NULL", CanBeNull=false)]
-		public string CODE_NAME
-		{
-			get
-			{
-				return this._CODE_NAME;
-			}
-			set
-			{
-				if ((this._CODE_NAME != value))
-				{
-					this.OnCODE_NAMEChanging(value);
-					this.SendPropertyChanging();
-					this._CODE_NAME = value;
-					this.SendPropertyChanged("CODE_NAME");
-					this.OnCODE_NAMEChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.B")]
-	public partial class B : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _CODE;
-		
-		private string _CODE_NAME;
-		
-    #region 확장성 메서드 정의
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnCODEChanging(int value);
-    partial void OnCODEChanged();
-    partial void OnCODE_NAMEChanging(string value);
-    partial void OnCODE_NAMEChanged();
-    #endregion
-		
-		public B()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CODE", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int CODE
-		{
-			get
-			{
-				return this._CODE;
-			}
-			set
-			{
-				if ((this._CODE != value))
-				{
-					this.OnCODEChanging(value);
-					this.SendPropertyChanging();
-					this._CODE = value;
-					this.SendPropertyChanged("CODE");
-					this.OnCODEChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CODE_NAME", DbType="NChar(100) NOT NULL", CanBeNull=false)]
-		public string CODE_NAME
-		{
-			get
-			{
-				return this._CODE_NAME;
-			}
-			set
-			{
-				if ((this._CODE_NAME != value))
-				{
-					this.OnCODE_NAMEChanging(value);
-					this.SendPropertyChanging();
-					this._CODE_NAME = value;
-					this.SendPropertyChanged("CODE_NAME");
-					this.OnCODE_NAMEChanged();
+					this._Age = value;
+					this.SendPropertyChanged("Age");
+					this.OnAgeChanged();
 				}
 			}
 		}

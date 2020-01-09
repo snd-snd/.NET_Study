@@ -32,5 +32,15 @@ namespace _00_ExampleApp.Properties {
                 return ((string)(this["studyConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=data;User ID=kkorison;Password=1234")]
+        public string dataConnectionString {
+            get {
+                return ((string)(this["dataConnectionString"]));
+            }
+        }
     }
 }

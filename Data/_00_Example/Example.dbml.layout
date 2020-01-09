@@ -2,22 +2,10 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Example">
   <DataContextMoniker Name="/ExampleDataContext" />
   <nestedChildShapes>
-    <classShape Id="5861212f-7da3-4746-827d-f25f6e65173a" isExpanded="false" absoluteBounds="0.5, 0.625, 2, 0.45">
-      <DataClassMoniker Name="/ExampleDataContext/member" />
+    <classShape Id="216ae2a5-7551-43ce-a02e-984bf94bd67f" absoluteBounds="0.875, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/ExampleDataContext/Members" />
       <nestedChildShapes>
-        <elementListCompartment Id="27580a3d-5ef2-49c6-9866-1a92889ba8bf" absoluteBounds="0.51500000000000012, 1.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="f58a02a4-5ba0-4d30-b64d-93f8971ebb4f" isExpanded="false" absoluteBounds="2.625, 0.625, 2, 0.45">
-      <DataClassMoniker Name="/ExampleDataContext/A" />
-      <nestedChildShapes>
-        <elementListCompartment Id="2c3cde5b-b86f-4d87-88a1-eba4cf1f9da0" absoluteBounds="2.6399999999999997, 1.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="cb64063c-f972-4091-a11a-959e1a68310d" isExpanded="false" absoluteBounds="4.75, 0.625, 2, 0.45">
-      <DataClassMoniker Name="/ExampleDataContext/B" />
-      <nestedChildShapes>
-        <elementListCompartment Id="61966f80-a66a-48a6-aafc-00bae94dc444" absoluteBounds="4.765, 1.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="2dc3f37b-5248-426b-9b0b-b0d1b046147b" absoluteBounds="0.89000000000000012, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>
