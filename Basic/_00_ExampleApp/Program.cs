@@ -5,18 +5,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 using System.Data.SqlClient;
+using System.Data;
+using System.Diagnostics;
 
 namespace _00_ExampleApp
 {
    
     class Program
     {
-        
         static void Main(string[] args)
         {
-            string a = @"her name was ""sara""";
-            Console.WriteLine(a);
+            Debug.Write("dddddddddddddddd");
+            Debug.Write("ㅁㅁㅁㅁㅁㅁㅁㅁㅁ");
 
-        }
+            Console.ReadKey();
+        } 
     }
 }

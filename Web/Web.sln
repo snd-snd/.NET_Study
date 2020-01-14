@@ -25,6 +25,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebFormSite", "http://local
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMVCApp", "WebMVCApp\WebMVCApp.csproj", "{7A2A6BBD-B66D-463E-A8E5-85AD500C86D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{A1531709-5255-43F5-BC97-680920DDC1B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1531709-5255-43F5-BC97-680920DDC1B7}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{A1531709-5255-43F5-BC97-680920DDC1B7}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{7A2A6BBD-B66D-463E-A8E5-85AD500C86D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A2A6BBD-B66D-463E-A8E5-85AD500C86D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A2A6BBD-B66D-463E-A8E5-85AD500C86D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A2A6BBD-B66D-463E-A8E5-85AD500C86D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

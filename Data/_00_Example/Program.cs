@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace _00_ExampleApp
 {
@@ -10,29 +11,27 @@ namespace _00_ExampleApp
     {
         static void Main(string[] args)
         {
+            String path = "D:/test.txt";
 
-            ExampleDataContext db = new ExampleDataContext();
+            StreamReader reader = new StreamReader(path);
 
-            var list = from i in db.Members
-                       orderby i.Age descending
-                       select i.Name;
+            StringBuilder sb = new StringBuilder();
 
+            int flag = 1;
 
-            var list2 = db.Members.Where(s => s.Age == 29);
-
-            foreach (var item in list2)
+            while ((flag = reader.Read()) > 0)
             {
-                Console.WriteLine(item.Name);
+                sb.Append(Convert.ToChar(flag));
             }
+            Console.WriteLine(sb.ToString());
 
-            int[] numbers = { 1, 2, 3, 4, 5, 6, 7 };
+            reader.Close();
 
-            var a = numbers.Where(s => s >= 5);
+            
 
-            foreach (var item in a)
-            {
-                Console.WriteLine(item);
-            }
+            
+
+            
 
         }
     }
