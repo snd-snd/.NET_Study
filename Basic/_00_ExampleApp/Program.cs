@@ -7,18 +7,44 @@ using System.Threading;
 using System.Data.SqlClient;
 using System.Data;
 using System.Diagnostics;
+using Microsoft.ApplicationBlocks.Data;
 
 namespace _00_ExampleApp
 {
-   
+    
     class Program
     {
         static void Main(string[] args)
         {
-            Debug.Write("dddddddddddddddd");
-            Debug.Write("ㅁㅁㅁㅁㅁㅁㅁㅁㅁ");
+            String url = Run();
+            Console.WriteLine(url);
+        }
 
-            Console.ReadKey();
-        } 
+        internal static String Run()
+        {
+            String connectionString = "server=.;database=origin;uid=origin;pwd=1234;";
+            String sql = "select getdate()";
+            String url = String.Empty;
+
+            try
+            {
+                using (SqlDataReader dr = SqlHelper.ExecuteReader(connectionString, CommandType.Text, sql))
+                {
+                    if (dr.HasRows)
+                    {
+                        dr.Read();
+                        url = dr[0].ToString();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.Write(e.Message);
+            }
+
+            return url;
+        }
     }
+
+    
 }
