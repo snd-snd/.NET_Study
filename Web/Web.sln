@@ -1,31 +1,29 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebForms", "WebForms\WebForms.csproj", "{568146CD-93AA-4217-86AF-8A9CD6654DE7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMvcBasic", "WebMvcBasic\WebMvcBasic.csproj", "{2D19B5CF-2857-4A08-B221-96D4A2FEDDD4}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebFormSite", "http://localhost:3722", "{A1531709-5255-43F5-BC97-680920DDC1B7}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebFormSiteBasic", "http://localhost:9531", "{924D100E-6DEC-4BE4-ADA5-99AAA7486506}"
 	ProjectSection(WebsiteProperties) = preProject
 		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_3722"
-		Debug.AspNetCompiler.PhysicalPath = "WebFormSite\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_3722\"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_9531"
+		Debug.AspNetCompiler.PhysicalPath = "WebFormSiteBasic\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_9531\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_3722"
-		Release.AspNetCompiler.PhysicalPath = "WebFormSite\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_3722\"
+		Release.AspNetCompiler.VirtualPath = "/localhost_9531"
+		Release.AspNetCompiler.PhysicalPath = "WebFormSiteBasic\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_9531\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		SlnRelativePath = "WebFormSite\"
+		SlnRelativePath = "WebFormSiteBasic\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMVCApp", "WebMVCApp\WebMVCApp.csproj", "{7A2A6BBD-B66D-463E-A8E5-85AD500C86D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,18 +31,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{568146CD-93AA-4217-86AF-8A9CD6654DE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{568146CD-93AA-4217-86AF-8A9CD6654DE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{568146CD-93AA-4217-86AF-8A9CD6654DE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{568146CD-93AA-4217-86AF-8A9CD6654DE7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A1531709-5255-43F5-BC97-680920DDC1B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A1531709-5255-43F5-BC97-680920DDC1B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A1531709-5255-43F5-BC97-680920DDC1B7}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{A1531709-5255-43F5-BC97-680920DDC1B7}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{7A2A6BBD-B66D-463E-A8E5-85AD500C86D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7A2A6BBD-B66D-463E-A8E5-85AD500C86D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7A2A6BBD-B66D-463E-A8E5-85AD500C86D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7A2A6BBD-B66D-463E-A8E5-85AD500C86D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D19B5CF-2857-4A08-B221-96D4A2FEDDD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D19B5CF-2857-4A08-B221-96D4A2FEDDD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D19B5CF-2857-4A08-B221-96D4A2FEDDD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D19B5CF-2857-4A08-B221-96D4A2FEDDD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{924D100E-6DEC-4BE4-ADA5-99AAA7486506}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{924D100E-6DEC-4BE4-ADA5-99AAA7486506}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{924D100E-6DEC-4BE4-ADA5-99AAA7486506}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{924D100E-6DEC-4BE4-ADA5-99AAA7486506}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
